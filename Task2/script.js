@@ -1,16 +1,15 @@
 const lamp = document.getElementById('lamp');
 
 lamp.style.backgroundColor = "gray";
-document.body.style.backgroundColor = "white";
+document.body.style.backgroundColor = "beige" ;
 
-lamp.addEventListener('click', () => {
-    if (lamp.style.backgroundColor === "gray") {
+lamp.addEventListener('click' , ()=>{
+    if(lamp.style.backgroundColor === "gray"){
         lamp.style.backgroundColor = "yellow";
-        document.body.style.backgroundColor = "black";
+        document.body.style.backgroundColor = "black" ;
     }
-    else {
+    else{
         lamp.style.backgroundColor = "gray";
-        document.body.style.backgroundColor = "white";
-
+        document.body.style.backgroundColor = "beige";
     }
 })
