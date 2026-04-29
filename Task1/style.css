@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#change-btn{
+    padding: 10px ;
+    background: #000;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+#change-btn:hover{
+    transform: scale(1.1); 
+    animation-duration: 1000ms;
+}
