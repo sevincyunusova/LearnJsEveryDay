@@ -1,0 +1,56 @@
+/* Bütün səhifəni mərkəzləyirik */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif; /* Daha müasir şrift */
+    background-color: #ffffff;
+    transition: background-color 0.5s ease-in-out; /* Rəng dəyişimi rəvan olsun */
+}
+
+/* Rəng adının yazıldığı başlıq */
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.8); /* Arxa fon rəngli olanda yazı oxunsun deyə */
+    padding: 10px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 60px; /* Yazı yoxdursa belə yer tutsun */
+    display: flex;
+    align-items: center;
+}
+
+/* Düymənin dizaynı */
+.color-change-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Düymə hover effekti */
+.color-change-btn:hover {
+    background-color: #000;
+    transform: translateY(-5px); /* Yuxarı qalxma effekti */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Düyməyə basanda */
+.color-change-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
