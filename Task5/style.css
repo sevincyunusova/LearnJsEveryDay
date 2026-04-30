@@ -1,0 +1,103 @@
+body {
+    background-color: #f4f7f6;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#input {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 15px;
+}
+
+#input:focus {
+    border-color: #6c5ce7;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+    margin: 5px;
+}
+
+#add-btn {
+    background-color: #00b894;
+    color: white;
+}
+
+#add-btn::after {
+    content: "Add Task";
+}
+
+#add-btn:hover {
+    background-color: #55efc4;
+}
+
+#remove-btn {
+    background-color: #ff7675;
+    color: white;
+}
+
+#remove-btn::after {
+    content: "Clear All"; 
+}
+
+#remove-btn:hover {
+    background-color: #fab1a0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #6c5ce7;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
