@@ -66,7 +66,7 @@ button {
 }
 
 #remove-btn::after {
-    content: "Clear All"; 
+    content: "Clear Last Task"; 
 }
 
 #remove-btn:hover {
@@ -75,6 +75,10 @@ button {
 
 button:active {
     transform: scale(0.95);
+}
+
+#removeAll-btn::after {
+    content: "Clear All"; 
 }
 
 ul {
