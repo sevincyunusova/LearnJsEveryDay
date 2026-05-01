@@ -5,8 +5,14 @@ const list = document.getElementById('task-list');
 
 addBtn.addEventListener('click', ()=>{
     let taskValue = input.value;
-    const newLi = document.createElement('li');
-    newLi.textContent = taskValue;
-    list.appendChild(newLi);
-    input.value = "";
-})
+    if(taskValue.trim() != ""){
+        const newLi = document.createElement('li');
+        newLi.textContent = taskValue;
+        list.appendChild(newLi);
+        input.value = "";
+    }
+
+    else{
+        alert("Task yazin!!!");
+    }
+}) 
