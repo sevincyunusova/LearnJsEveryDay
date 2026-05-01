@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e; 
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 400px;
+    border: 2px solid #0f3460;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #e94560;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#number {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0f3460;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#number:focus {
+    box-shadow: 0 0 10px #e94560;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#check-btn {
+    background-color: #e94560;
+    color: white;
+}
+
+#check-btn:hover {
+    background-color: #ff2e63;
+    transform: translateY(-2px);
+}
+
+#restart-btn {
+    background-color: transparent;
+    color: #e94560;
+    border: 2px solid #e94560;
+}
+
+#restart-btn:hover {
+    background-color: #e94560;
+    color: white;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #95a5a6;
+}
+
+h4 span {
+    font-weight: bold;
+    color: #00d2d3; 
+    font-size: 20px;
+}
+
+.winner {
+    background-color: #1b4d3e !important;
+    border-color: #2ecc71 !important;
+    transition: 0.5s;
+}
