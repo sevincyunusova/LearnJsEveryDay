@@ -7,36 +7,34 @@ let seconds = 0;
 let minutes = 0;
 let timer = null;
 
-function startTimer() {
+function startTimer(){
     seconds++;
-    if (seconds === 60) {
+    if(seconds === 60){
         minutes++;
         seconds = 0;
     }
 
-    let minutesTxt = minutes < 10 ? "0" + minutes : minutes;
-    let secondsTxt = seconds < 10 ? "0" + seconds : seconds;
+    //00:00 formati
+    let minutesTxt = minutes < 10 ? "0"+minutes : minutes;
+    let secondsTxt = seconds < 10 ? "0"+seconds : seconds;
 
     time.innerText = `${minutesTxt} : ${secondsTxt}`;
 }
 
-startBtn.addEventListener('click', () => {
-    if (timer !== null) return;
-    timer = setInterval(startTimer, 1000);
+startBtn.addEventListener('click', ()=>{
+    if(timer !== null) return;
+    timer = setInterval(startTimer , 1000);
 })
 
-stopBtn.addEventListener('click', () => {
+stopBtn.addEventListener('click' , ()=>{
     clearInterval(timer);
     timer = null;
-
 })
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', ()=>{
     clearInterval(timer);
     timer = null;
-
-
-    minutes = 0;
     seconds = 0;
+    minutes = 0;
     time.innerText = "00:00";
 })
