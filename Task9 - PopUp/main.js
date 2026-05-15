@@ -9,3 +9,9 @@ openBtn.addEventListener('click', ()=>{
 closeBtn.addEventListener('click', ()=>{
     overlay.style.display = 'none';
 })
+
+window.addEventListener('click', ()=>{
+    if(event.target === overlay){
+            overlay.style.display = 'none';
+    }
+})
