@@ -1,0 +1,98 @@
+/* 1. Ümumi sıfırlama (Səhifənin kənar boşluqlarını təmizləyir) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Səhifənin gövdəsi (Düyməni mərkəzləşdirmək və arxafon rəngi vermək üçün) */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6; /* Açıq boz arxafon */
+}
+
+/* 2. AÇMAQ ÜÇÜN ƏSAS DÜYMƏ */
+#open-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4f46e5; /* Müasir göy/bənövşəyi rəng */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Küncləri yumrulaşdırır */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Düymənin üzərinə gələndə və basanda olan effektlər */
+#open-btn:hover { background-color: #4338ca; }
+#open-btn:active { transform: scale(0.95); }
+
+/* 3. ÖRTÜK (OVERLAY) DİZAYNI */
+.overlay {
+    display: none; /* JS ilə 'flex' ediləcək */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Şəffaf qara (40%) */
+    backdrop-filter: blur(5px); /* ARXAFONU BULANIQLAŞDIRIR - Çox qəşəng effektdir */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Həmişə hər şeyin ən üstündə qalması üçün */
+}
+
+/* 4. POP-UP PƏNCƏRƏSİ (AĞ QUTU) */
+.popup {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px; /* Daha yumru künclər */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    /* Dərin kölgə effekti (3D görünüş verir) */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* Ekrana çıxma animasiyası (Aşağıdakı @keyframes ilə işləyir) */
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+}
+
+/* Başlıq mətni */
+.popup h2 {
+    color: #1f2937; /* Tünd boz/qara */
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* 5. BAĞLAMA DÜYMƏSİ */
+#close-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #ef4444; /* Qırmızı */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#close-btn:hover { background-color: #dc2626; }
+
+/* 6. ANİMASİYA (Pop-up açılanda kiçikdən böyüyə doğru "hoppanaraq" gəlməsi üçün) */
+@keyframes popIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
