@@ -3,12 +3,12 @@ const questions = document.querySelectorAll('.question');
 questions.forEach(function(btn){
     btn.addEventListener('click', function(){
         const answer = this.nextElementSibling;
+        const isOpen = answer.style.display === 'block';
 
-        if(answer.style.display === 'block'){
-            answer.style.display = 'none';
-        }
-
-        else{
+        document.querySelectorAll('.answer').forEach(function(item){
+            item.style.display = 'none';
+        })  
+        if(!isOpen){
             answer.style.display = 'block';
         }
     })
