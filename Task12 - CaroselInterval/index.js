@@ -3,4 +3,4 @@ const images = document.querySelectorAll('.card');
 
 setInterval(() => {
     track.appendChild(track.firstElementChild);
-}, 3000);
+}, 5000);
